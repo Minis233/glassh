@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Inner safe area is roughly 24..84 -->
+    <!-- Rounded glass terminal frame -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillAlpha="0.18"
+        android:pathData="M30,38 L78,38 A6,6 0 0 1 84,44 L84,72 A6,6 0 0 1 78,78 L30,78 A6,6 0 0 1 24,72 L24,44 A6,6 0 0 1 30,38 Z" />
+    <!-- Top bar -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillAlpha="0.55"
+        android:pathData="M30,38 L78,38 A6,6 0 0 1 84,44 L84,48 L24,48 L24,44 A6,6 0 0 1 30,38 Z" />
+    <!-- Three macOS dots -->
+    <path android:fillColor="#FF6B6B" android:pathData="M30,43 m-1.6,0 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0" />
+    <path android:fillColor="#FFD166" android:pathData="M35,43 m-1.6,0 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0" />
+    <path android:fillColor="#06D6A0" android:pathData="M40,43 m-1.6,0 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0" />
+    <!-- Prompt: > _ -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M32,58 L38,63 L32,68" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:pathData="M44,68 L60,68" />
+</vector>
