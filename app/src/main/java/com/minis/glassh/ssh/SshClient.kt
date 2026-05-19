@@ -40,7 +40,7 @@ class SshClient(private val host: HostConfig) {
     suspend fun probeHostKey(): String? = withContext(Dispatchers.IO) {
         val session = openSession(probeOnly = true)
         try {
-            session.hostKey?.let { sha256Base64(it.key) }
+            session.hostKey?.let { fingerprintFromBase64(it.key) }
         } finally {
             runCatching { session.disconnect() }
         }
@@ -75,7 +75,7 @@ class SshClient(private val host: HostConfig) {
         // Verify pinned fingerprint after connect.
         val pin = host.pinnedFingerprint
         if (pin != null) {
-            val actual = session.hostKey?.let { sha256Base64(it.key) }
+            val actual = session.hostKey?.let { fingerprintFromBase64(it.key) }
             if (actual != pin) {
                 runCatching { session.disconnect() }
                 throw SecurityException(
@@ -130,6 +130,11 @@ class SshClient(private val host: HostConfig) {
                 digest,
                 android.util.Base64.NO_WRAP or android.util.Base64.NO_PADDING
             )
+        }
+
+        fun fingerprintFromBase64(b64: String): String {
+            val bytes = android.util.Base64.decode(b64, android.util.Base64.DEFAULT)
+            return sha256Base64(bytes)
         }
     }
 }
