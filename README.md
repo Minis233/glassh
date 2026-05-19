@@ -4,6 +4,8 @@ A glass-styled SSH monitoring client for Android. Connects to your VPS over SSH,
 
 ![min API 26](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+<p align="center"><img src="docs/dashboard.png" alt="Glassh dashboard" width="320"></p>
+
 ## Features
 
 - **Liquid-glass UI** — iridescent gradient backdrop, blurred color blobs, frosted panels with edge highlight and gradient borders. Auto adapts to light and dark.
