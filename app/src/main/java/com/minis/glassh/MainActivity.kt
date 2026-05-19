@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.systemBars
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalDensity
 import com.minis.glassh.ui.DashboardScreen
 import com.minis.glassh.ui.GlassBackdrop
 import com.minis.glassh.ui.GlasshTheme
@@ -34,7 +33,7 @@ class MainActivity : ComponentActivity() {
             GlasshTheme {
                 GlassBackdrop {
                     val screen by vm.screen.collectAsState()
-                    val systemBars = WindowInsets.systemBars.asPaddingValues(LocalDensity.current)
+                    val systemBars = WindowInsets.systemBars.asPaddingValues()
                     Box(
                         Modifier
                             .fillMaxSize()
